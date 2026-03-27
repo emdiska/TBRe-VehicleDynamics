@@ -1,16 +1,5 @@
 % plot_yaw_vs_lateral.m
 % Yaw Acceleration vs Lateral Acceleration — envelope analysis
-%
-% FIXES APPLIED vs original:
-%   FIX 1 — YawRate converted from deg/s to rad/s before differentiation
-%            (max 85 deg/s is physically plausible; 85 rad/s would be ~4874
-%             deg/s — impossible for a ground vehicle)
-%   FIX 2 — IMU yaw rate bias removed using stationary-phase mean
-%            (non-zero mean of ~0.42 deg/s indicates sensor offset;
-%             removing it prevents DC error propagating into yaw acceleration)
-%   FIX 3 — InlineAcc used as lateral acceleration channel
-%            (IMU mounted incorrectly in car; InlineAcc is the true lateral axis)
-%
 % Author : Mahdi Kadiri
 % Data   : TBRe 2025 car, car park testing
 
